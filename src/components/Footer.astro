@@ -1,0 +1,16 @@
+---
+interface FooterProps {
+  footerText: string;
+}
+
+const { footerText } = Astro.props as FooterProps;
+---
+
+<footer class="bg-gradient-to-t from-dark-grey py-4">
+  <div class="mx-auto w-11/12 max-w-screen-xl">
+    <p class="text-alternate">{footerText}</p>
+    <p class="text-xs text-secondary">
+      Copyright &copy; {new Date().getFullYear()}
+    </p>
+  </div>
+</footer>
