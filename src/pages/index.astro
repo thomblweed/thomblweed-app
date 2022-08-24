@@ -1,11 +1,14 @@
 ---
 import Footer from "../components/Footer.astro";
+import Logo from "../components/Logo.astro";
 import Layout from "../layouts/Layout.astro";
 
 const appTitle = "thomblweed";
 ---
 
 <Layout title={appTitle}>
-  <main class="h-full mx-auto w-11/12 max-w-screen-xl"></main>
+  <main class="h-full mx-auto w-11/12 max-w-screen-xl">
+    <Logo />
+  </main>
   <Footer footerText={appTitle} />
 </Layout>

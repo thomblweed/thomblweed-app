@@ -3,7 +3,7 @@
 
 @layer base {
   html {
-    @apply text-grey;
+    @apply text-grey font-roboto;
   }
   button {
     @apply text-black;
