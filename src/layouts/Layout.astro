@@ -17,10 +17,6 @@ const { title } = Astro.props as LayoutProps;
     <title>{title}</title>
   </head>
   <body>
-    <div
-      class="flex flex-col h-screen bg-gradient-to-b from-dark via-dark-secondary to-dark"
-    >
-      <slot />
-    </div>
+    <slot />
   </body>
 </html>
