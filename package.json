@@ -5,14 +5,16 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "pnpm clean && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write --plugin-search-dir=. ."
+    "format": "prettier --write --plugin-search-dir=. .",
+    "clean": "if [ -d \"dist\" ]; then rm -rf \"dist\"; fi"
   },
   "devDependencies": {
     "@astrojs/react": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/vercel": "^1.0.1",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "astro": "^1.0.7",

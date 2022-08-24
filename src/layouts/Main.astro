@@ -1,0 +1,19 @@
+---
+import Footer from "../components/Footer.astro";
+import Logo from "../components/Logo.astro";
+import Layout from "../layouts/Layout.astro";
+
+const appTitle = "thomblweed";
+---
+
+<Layout title={appTitle}>
+    <div
+        class="flex flex-col h-screen bg-gradient-to-b from-dark via-dark-secondary to-dark"
+    >
+        <main class="h-full mx-auto w-11/12 max-w-screen-xl">
+            <Logo />
+            <slot />
+        </main>
+        <Footer footerText={appTitle} />
+    </div>
+</Layout>

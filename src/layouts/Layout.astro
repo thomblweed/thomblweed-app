@@ -1,5 +1,5 @@
 ---
-import "../assets/fonts/roboto-mono-v13-latin-regular.woff";
+import "../styles/global.css";
 
 export interface LayoutProps {
   title: string;
@@ -14,14 +14,9 @@ const { title } = Astro.props as LayoutProps;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
-    <div
-      class="flex flex-col h-screen bg-gradient-to-b from-dark via-dark-secondary to-dark"
-    >
-      <slot />
-    </div>
+    <slot />
   </body>
 </html>
